@@ -1,0 +1,22 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":separateMajorReleases",
+    ":combinePatchMinorReleases",
+    "group:allNonMajor"
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": ["ruff"],
+      "groupName": "ruff"
+    }
+  ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true
+  },
+  "postUpdateOptions": [
+    "uvLock"
+  ]
+}

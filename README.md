@@ -87,6 +87,25 @@ Damit die GitHub Action auf PyPI hochladen darf, musst du **Trusted Publishing**
 3. Wähle GitHub.
 4. Gib den Owner (`domoskanonos`), das Repository (`python-starter`) und den Workflow-Dateinamen (`publish.yml`) an.
 
+## Abhängigkeiten aktuell halten
+
+### Automatische Updates
+Dieses Projekt verwendet **Renovate**, um Abhängigkeiten automatisch aktuell zu halten. Renovate scannt regelmäßig die `pyproject.toml` und `uv.lock` und erstellt Pull Requests für neue Versionen.
+
+### Manuelle Updates
+Du kannst die Abhängigkeiten auch jederzeit manuell mit `uv` aktualisieren:
+
+```bash
+# Alle Pakete in der uv.lock auf die neueste kompatible Version heben
+uv lock --upgrade
+
+# Ein spezifisches Paket aktualisieren
+uv lock --upgrade-package ruff
+
+# Die lokale Umgebung (.venv) mit der uv.lock synchronisieren
+uv sync
+```
+
 ## Lizenz
 
 Dieses Projekt steht unter der MIT-Lizenz. Siehe [LICENSE](LICENSE) für Details.
