@@ -1,0 +1,22 @@
+[project]
+name = "project"
+version = "0.1.0"
+description = "python project starter template"
+authors = [{ name = "Dominik Bruhn", email = "dominikbruhn@googlemail.com" }]
+license = { text = "MIT" }
+requires-python = ">=3.10,<3.12"
+dependencies = [
+    "python-dotenv>=1.1.1",
+    "pytest>=8.4.2",
+    "pytest-asyncio>=0.23.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/project"]
+
+[dependency-groups]
+dev = ["ruff>=0.13.1", "pip>=23.0.1", "pyinstaller>=6.0.0"]
