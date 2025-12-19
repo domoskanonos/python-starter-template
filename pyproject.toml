@@ -9,6 +9,7 @@ dependencies = [
     "python-dotenv>=1.1.1",
     "pytest>=8.4.2",
     "pytest-asyncio>=0.23.0",
+    "pydantic-settings>=2.12.0",
 ]
 
 [build-system]
@@ -19,7 +20,13 @@ build-backend = "hatchling.build"
 packages = ["src/project"]
 
 [dependency-groups]
-dev = ["ruff>=0.13.1", "pip>=23.0.1", "pyinstaller>=6.0.0", "pre-commit>=3.5.0"]
+dev = [
+    "ruff>=0.13.1",
+    "pip>=23.0.1",
+    "pyinstaller>=6.0.0",
+    "pre-commit>=3.5.0",
+    "mypy>=1.19.1",
+]
 
 [tool.ruff]
 # Ziel-Version
@@ -58,6 +65,23 @@ ban-relative-imports = "all"
 
 [tool.ruff.lint.per-file-ignores]
 "__init__.py" = ["F401"]
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = false
+no_implicit_optional = true
+strict_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+ignore_missing_imports = true
 "tests/**/*.py" = ["D103"]
 
 [tool.ruff.format]
