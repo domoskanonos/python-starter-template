@@ -1,8 +1,13 @@
+"""Main entry point for the project."""
+
 from project.config import ProjectConfig
 
-logger = ProjectConfig.getLogger()
 
-def main():
+logger = ProjectConfig.get_logger()
+
+
+def main() -> None:
+    """Start the python blueprint."""
     logger.info("start python blueprint")
 
 

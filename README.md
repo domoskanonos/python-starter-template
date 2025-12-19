@@ -26,6 +26,9 @@ Klone das Repository und installiere die Abhängigkeiten:
 git clone https://github.com/domoskanonos/python-starter.git
 cd python-starter
 uv sync
+
+# Pre-commit Hooks installieren (wichtig für lokale Code-Prüfung)
+uv run pre-commit install
 ```
 
 ## Entwicklung
