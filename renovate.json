@@ -7,6 +7,9 @@
     "group:allNonMajor"
   ],
   "platformAutomerge": true,
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0,
+  "dependencyDashboardAutomerge": true,
   "packageRules": [
     {
       "matchPackageNames": ["ruff"],

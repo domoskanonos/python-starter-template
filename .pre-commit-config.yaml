@@ -16,4 +16,4 @@ repos:
     rev: v1.13.0
     hooks:
       - id: mypy
-        additional_dependencies: [types-all] # Optional: für bessere Typ-Abdeckung von Libs
+        additional_dependencies: [types-python-dotenv, pydantic]
