@@ -6,10 +6,12 @@
     ":combinePatchMinorReleases",
     "group:allNonMajor"
   ],
+  "platformAutomerge": true,
   "packageRules": [
     {
       "matchPackageNames": ["ruff"],
-      "groupName": "ruff"
+      "groupName": "ruff",
+      "automerge": true
     },
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
