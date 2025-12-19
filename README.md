@@ -90,7 +90,12 @@ Damit die GitHub Action auf PyPI hochladen darf, musst du **Trusted Publishing**
 ## Abhängigkeiten aktuell halten
 
 ### Automatische Updates
-Dieses Projekt verwendet **Renovate**, um Abhängigkeiten automatisch aktuell zu halten. Renovate scannt regelmäßig die `pyproject.toml` und `uv.lock` und erstellt Pull Requests für neue Versionen.
+Dieses Projekt verwendet **Renovate** via GitHub Actions, um Abhängigkeiten automatisch aktuell zu halten.
+
+**Einrichtung:**
+1.  **PAT erstellen**: Gehe zu [GitHub Settings -> Developer settings -> Personal Access Tokens -> Tokens (classic)](https://github.com/settings/tokens).
+2.  **Berechtigungen**: Erstelle ein neues Token mit den Scopes `repo`, `workflow` und `write:packages`.
+3.  **Secret hinzufügen**: Gehe in deinem Repository zu `Settings -> Secrets and variables -> Actions` und erstelle ein Secret namens `RENOVATE_TOKEN` mit dem Wert deines Tokens.
 
 ### Manuelle Updates
 Du kannst die Abhängigkeiten auch jederzeit manuell mit `uv` aktualisieren:
