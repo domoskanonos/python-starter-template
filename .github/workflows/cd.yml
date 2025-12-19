@@ -1,4 +1,4 @@
-name: CD (Publish)
+name: CD (Continuous Deployment)
 
 on:
   push:
