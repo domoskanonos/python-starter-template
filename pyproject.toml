@@ -94,4 +94,4 @@ version_toml = ["pyproject.toml:project.version"]
 branch = "main"
 upload_to_pypi = true
 upload_to_release = true
-build_command = "uv build"
+build_command = "python -m pip install uv && uv build"

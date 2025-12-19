@@ -29,3 +29,6 @@ jobs:
         uses: python-semantic-release/python-semantic-release@v9.21.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          # Ensure uv is available in the path for the build command
+          PATH: ${{ env.PATH }}:${{ github.workspace }}/.bin
