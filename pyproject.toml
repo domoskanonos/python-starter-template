@@ -26,6 +26,7 @@ dev = [
     "pyinstaller>=6.0.0",
     "pre-commit>=3.5.0",
     "mypy>=1.19.1",
+    "python-semantic-release>=10.5.3",
 ]
 
 [tool.ruff]
@@ -65,6 +66,7 @@ ban-relative-imports = "all"
 
 [tool.ruff.lint.per-file-ignores]
 "__init__.py" = ["F401"]
+"tests/**/*.py" = ["D103"]
 
 [tool.mypy]
 python_version = "3.12"
@@ -82,8 +84,14 @@ warn_no_return = true
 warn_unreachable = true
 strict_equality = true
 ignore_missing_imports = true
-"tests/**/*.py" = ["D103"]
 
 [tool.ruff.format]
 quote-style = "double"
 indent-style = "space"
+
+[tool.semantic_release]
+version_variable = "pyproject.toml:version"
+branch = "main"
+upload_to_pypi = true
+upload_to_release = true
+build_command = "uv build"
