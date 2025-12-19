@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v0.3.1 (2025-12-19)
+
+### Bug Fixes
+
+- Merge branch 'main' of github.com:domoskanonos/python-starter
+  ([`2b5cf3b`](https://github.com/domoskanonos/python-starter-template/commit/2b5cf3b65aef9aa3324d95114bfacb079467d7a0))
+
+
 ## v0.3.0 (2025-12-19)
 
 ### Bug Fixes
@@ -15,6 +23,11 @@
 
 - Consolidate CI workflows and implement semantic release process
   ([`1f8668d`](https://github.com/domoskanonos/python-starter-template/commit/1f8668de19ac100501d67792f7eacc30d3d0021b))
+
+### Refactoring
+
+- Rename CI workflow to Pipeline
+  ([`6a51b57`](https://github.com/domoskanonos/python-starter-template/commit/6a51b5780a480c2a7eba13729e262593f1d4e208))
 
 
 ## v0.2.0 (2025-12-19)
