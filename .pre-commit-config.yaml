@@ -22,4 +22,4 @@ repos:
     hooks:
       - id: conventional-pre-commit
         stages: [commit-msg]
-        args: [] # Optional: hier könnten spezifische Typen erlaubt werden
+        args: []
