@@ -92,6 +92,4 @@ indent-style = "space"
 [tool.semantic_release]
 version_toml = ["pyproject.toml:project.version"]
 branches.main = { match = "main" }
-upload_to_pypi = true
-upload_to_release = true
 build_command = "python -m pip install uv && uv build"
