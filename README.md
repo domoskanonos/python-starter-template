@@ -34,7 +34,7 @@ cd python-starter
 uv sync
 
 # Install pre-commit hooks (CRITICAL for development)
-uv run pre-commit install
+uv run pre-commit install --hook-type pre-commit --hook-type commit-msg
 
 # Run the application
 uv run python src/project/main.py
