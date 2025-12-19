@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v0.3.2 (2025-12-19)
+
+### Bug Fixes
+
+- Update workflow name for pypi trusted publishing
+  ([`fbef590`](https://github.com/domoskanonos/python-starter-template/commit/fbef5907d6c652a737766e17e6ede9d78c107f4a))
+
+
 ## v0.3.1 (2025-12-19)
 
 ### Bug Fixes
