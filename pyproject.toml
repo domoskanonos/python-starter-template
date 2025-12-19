@@ -1,5 +1,5 @@
 [project]
-name = "project"
+name = "domoskanonos-python-starter"
 version = "0.1.0"
 description = "python project starter template"
 authors = [{ name = "Dominik Bruhn", email = "dominikbruhn@googlemail.com" }]
