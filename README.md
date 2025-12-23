@@ -1,7 +1,6 @@
 # Python Project Starter
 
-[![CI](https://github.com/domoskanonos/python-starter/actions/workflows/ci.yml/badge.svg)](https://github.com/domoskanonos/python-starter/actions/workflows/ci.yml)
-[![Release](https://github.com/domoskanonos/python-starter/actions/workflows/release.yml/badge.svg)](https://github.com/domoskanonos/python-starter/actions/workflows/release.yml)
+[![Pipeline](https://github.com/domoskanonos/python-starter/actions/workflows/pipeline.yml/badge.svg)](https://github.com/domoskanonos/python-starter/actions/workflows/pipeline.yml)
 [![PyPI version](https://img.shields.io/pypi/v/domoskanonos-python-starter.svg)](https://pypi.org/project/domoskanonos-python-starter/)
 [![Python Version](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
 
