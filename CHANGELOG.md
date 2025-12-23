@@ -1,12 +1,23 @@
 # CHANGELOG
 
 
+## v0.4.3 (2025-12-23)
+
+### Bug Fixes
+
+- Merge branch 'main' of github.com:domoskanonos/python-starter
+  ([`ab3a0ff`](https://github.com/domoskanonos/python-starter-template/commit/ab3a0ff7ef00e73dbc6a5708cfe9af37aeee100c))
+
+
 ## v0.4.2 (2025-12-23)
 
 ### Bug Fixes
 
 - Merge branch 'main' of github.com:domoskanonos/python-starter
   ([`c9e8a5f`](https://github.com/domoskanonos/python-starter-template/commit/c9e8a5fdce9e14df35b3c642e122a9fd5bea967c))
+
+- Update project
+  ([`90a9557`](https://github.com/domoskanonos/python-starter-template/commit/90a9557898206251eba5de2f2fa90cbd0a5b621e))
 
 
 ## v0.4.1 (2025-12-23)
