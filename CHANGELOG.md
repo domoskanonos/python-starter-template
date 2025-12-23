@@ -1,7 +1,20 @@
 # CHANGELOG
 
 
+## v0.4.1 (2025-12-23)
+
+### Bug Fixes
+
+- Merge branch 'main' of github.com:domoskanonos/python-starter
+  ([`e3ab38a`](https://github.com/domoskanonos/python-starter-template/commit/e3ab38ab70dc99c629fd909ca74a8717c1c8cc53))
+
+
 ## v0.4.0 (2025-12-19)
+
+### Bug Fixes
+
+- Remove dependencyDashboardAutomerge from renovate configuration
+  ([`deab01d`](https://github.com/domoskanonos/python-starter-template/commit/deab01d1cbb2f8962f1a91e13cc320c583481d3c))
 
 ### Features
 
