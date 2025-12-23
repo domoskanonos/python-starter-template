@@ -1,12 +1,23 @@
 # CHANGELOG
 
 
+## v0.4.2 (2025-12-23)
+
+### Bug Fixes
+
+- Merge branch 'main' of github.com:domoskanonos/python-starter
+  ([`c9e8a5f`](https://github.com/domoskanonos/python-starter-template/commit/c9e8a5fdce9e14df35b3c642e122a9fd5bea967c))
+
+
 ## v0.4.1 (2025-12-23)
 
 ### Bug Fixes
 
 - Merge branch 'main' of github.com:domoskanonos/python-starter
   ([`e3ab38a`](https://github.com/domoskanonos/python-starter-template/commit/e3ab38ab70dc99c629fd909ca74a8717c1c8cc53))
+
+- Update CI badge to use pipeline workflow
+  ([`7b536e9`](https://github.com/domoskanonos/python-starter-template/commit/7b536e9f7e8a34ecea41716c90658331e6889d07))
 
 
 ## v0.4.0 (2025-12-19)
