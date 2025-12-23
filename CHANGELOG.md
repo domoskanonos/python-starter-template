@@ -1,12 +1,25 @@
 # CHANGELOG
 
 
+## v0.4.0 (2025-12-19)
+
+### Features
+
+- Merge branch 'main' of github.com:domoskanonos/python-starter
+  ([`8295d7f`](https://github.com/domoskanonos/python-starter-template/commit/8295d7f294ca67bd62743e4e4c3f8eedff1c4d43))
+
+
 ## v0.3.2 (2025-12-19)
 
 ### Bug Fixes
 
 - Update workflow name for pypi trusted publishing
   ([`fbef590`](https://github.com/domoskanonos/python-starter-template/commit/fbef5907d6c652a737766e17e6ede9d78c107f4a))
+
+### Features
+
+- Add semantic release and publish steps for PyPI and GitHub Releases
+  ([`ea44567`](https://github.com/domoskanonos/python-starter-template/commit/ea44567dfadf695989cd73444a4e814f0113b9b2))
 
 
 ## v0.3.1 (2025-12-19)
