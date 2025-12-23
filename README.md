@@ -57,6 +57,78 @@ This project enforces [Conventional Commits](https://www.conventionalcommits.org
 - `fix:` (Bug fix, triggers a **patch** release)
 - `docs:`, `style:`, `refactor:`, `test:`, `chore:` (No release triggered)
 
+### ✅ Local Checks
+Before pushing, run all checks locally to ensure the CI passes:
+```bash
+# Run all pre-commit hooks (Linting, Formatting, Type Checking)
+uv run pre-commit run --all-files
+
+# Run tests
+uv run pytest
+```
+
+### 🔍 Tools used
+- **Type Checking**: `uv run mypy .`
+- **Linting & Formatting**: `uv run ruff check .` and `uv run ruff format .`
+
+---
+
+## 📦 Features
+
+- **[uv](https://github.com/astral-sh/uv)**: Ultra-fast Python package and environment manager.
+- **[Pydantic Settings](https://docs.pydantic.dev/latest/concepts/pydantic_settings/)**: Robust configuration management.
+- **[Mypy](https://mypy-lang.org/)**: Static type checking.
+- **[Ruff](https://github.com/astral-sh/ruff)**: All-in-one linter and formatter.
+- **[Docker](https://www.docker.com/)**: Multi-stage Dockerfile for optimized images.
+- **[Semantic Release](https://python-semantic-release.readthedocs.io/)**: Automated versioning and PyPI publishing via GitHub Actions.
+
+---
+
+## 🚢 Automated Releases
+
+Releases are fully automated via GitHub Actions in the [Pipeline](.github/workflows/pipeline.yml).
+
+1. **Push to main**: When you push a `feat:` or `fix:` commit to the `main` branch.
+2. **Auto-Versioning**: The pipeline calculates the new version using `python-semantic-release`.
+3. **Auto-Tagging**: A new Git tag and a `CHANGELOG.md` are created.
+4. **Auto-Publish**: The package is built and published to PyPI automatically.
+
+> **Note**: Ensure you have configured the [PyPI Trusted Publisher](https://pypi.org/manage/account/publishing/) for the workflow.
+
+---
+
+## 🤖 Dependency Management
+
+Dependencies are managed via `uv`.
+```bash
+uv add <package-name>
+uv add --dev <dev-package-name>
+```
+
+**Renovate** is active and will automatically create PRs for updates. Non-major updates are merged automatically if CI passes.
+
+### Manuelle Updates
+```bash
+# Update all packages in uv.lock
+uv lock --upgrade
+
+# Sync local environment
+uv sync
+```
+
+## Lizenz
+
+Dieses Projekt steht unter der MIT-Lizenz. Siehe [LICENSE](LICENSE) für Details.
+
+
+## 🛠 Development Workflow
+
+### 📝 Commit Messages (Conventional Commits)
+This project enforces [Conventional Commits](https://www.conventionalcommits.org/). Your commit messages **must** start with one of the following prefixes:
+- `feat:` (New feature, triggers a **minor** release)
+- `fix:` (Bug fix, triggers a **patch** release)
+- `docs:`, `style:`, `refactor:`, `test:`, `chore:` (No release triggered)
+
 **Example:** `feat: add pydantic settings support`
 
 ### ✅ Local Checks

@@ -1,13 +1,6 @@
 import logging
-from pathlib import Path
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
-
-
-# configure centralized logging
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-)
 
 
 class ProjectSettings(BaseSettings):
@@ -29,25 +22,25 @@ class ProjectSettings(BaseSettings):
 class ProjectConfig:
     """Central configuration for the project."""
 
-    logger = logging.getLogger("project")
-    settings = ProjectSettings()
+    _settings: ProjectSettings | None = None
+    _logger: logging.Logger | None = None
 
-    @staticmethod
-    def _ensure_dir(path: str) -> None:
-        """Ensures that a directory exists."""
-        Path(path).mkdir(parents=True, exist_ok=True)
+    @classmethod
+    def get_settings(cls) -> ProjectSettings:
+        """Returns the project settings, initializing them if necessary."""
+        if cls._settings is None:
+            cls._settings = ProjectSettings()
+        return cls._settings
 
-    @staticmethod
-    def get_logger() -> logging.Logger:
-        """Returns the central logger."""
-        return ProjectConfig.logger
-
-    @staticmethod
-    def get_settings() -> ProjectSettings:
-        """Returns the project settings."""
-        return ProjectConfig.settings
-
-    @staticmethod
-    def get_base_dir() -> Path:
-        """Returns the base directory of the project."""
-        return Path(__file__).resolve().parent.parent.parent
+    @classmethod
+    def get_logger(cls) -> logging.Logger:
+        """Returns the central logger, initializing it if necessary."""
+        if cls._logger is None:
+            # configure centralized logging if not already done
+            logging.basicConfig(
+                level=logging.INFO,
+                format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+            )
+            cls._logger = logging.getLogger("project")
+            cls._logger.setLevel(cls.get_settings().LOG_LEVEL)
+        return cls._logger
